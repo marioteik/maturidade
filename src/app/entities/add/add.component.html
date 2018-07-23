@@ -1,0 +1,54 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>Adicionar Entidade</h1>
+            </div>
+            <div class="col-md-6">
+                <button class="float-right pointer" [routerLink]="['/entities']">Voltar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <form [formGroup]="entityForm" (ngSubmit)="onSubmit()">
+            <div style="margin-bottom: 1em">
+                <button type="submit" [disabled]="entityForm.pristine" class="btn btn-success">Save</button> &nbsp;
+                <button type="button" (click)="revert()" [disabled]="entityForm.pristine" class="btn btn-danger">Revert</button>
+            </div>
+
+            <div class="form-group">
+                <label class="center-block">Name:
+                    <input class="form-control" formControlName="name">
+                </label>
+            </div>
+
+            <div class="form-group">
+                    <label class="center-block">Route:
+                        <input class="form-control" formControlName="route">
+                    </label>
+                </div>
+
+            <div formArrayName="formSchema" class="well well-lg">
+                <div *ngFor="let field of formSchema.controls; let i=index" [formGroupName]="i">
+                    <h4>Field #{{i + 1}}</h4>
+                    <div style="margin-left: 1em;">
+                        <div class="form-group">
+                            <label class="center-block">Name:
+                                <input class="form-control" formControlName="name">
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="center-block">Type:
+                                <input class="form-control" formControlName="type">
+                            </label>
+                        </div>
+                    </div>
+                    <br>
+                    <!-- End of the repeated address template -->
+                </div>
+                <button (click)="addField()" type="button">Add a field</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>Entidades</h1>
+            </div>
+            <div class="col-md-6">
+                <button class="float-right pointer" [routerLink]="['/entity/add']">Adicionar</button>
+            </div>
+        </div>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Entidade</th>
+                <th scope="col">Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let entity of entities">
+                <td>{{entity.name}}</td>
+                <td>
+                    <a class="btn-link btn" routerLink="/entity/{{entity._id}}">Alterar</a>
+                    <a class="btn-link btn" (click)="deleteEntity(entity._id)">Excluir</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
