@@ -10,24 +10,26 @@ import { EntitiesModule } from './entities/entities.module';
 import { HttpClientModule } from '@angular/common/http';
 import { BaseHttpService } from './services/base-http.service';
 import { HttpHandlerService } from './services/http-handler.service';
+import { COMPONENTS } from './shared/component.shared';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    ReactiveFormsModule,
-    AppRoutingModule,
-    EntitiesModule,
-    HttpClientModule
-  ],
-  providers: [
-    EntityService,
-    BaseHttpService,
-    HttpHandlerService,
-    UtilsService
-  ],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        COMPONENTS
+    ],
+    imports: [
+        BrowserModule,
+        ReactiveFormsModule,
+        AppRoutingModule,
+        EntitiesModule,
+        HttpClientModule
+    ],
+    providers: [
+        EntityService,
+        BaseHttpService,
+        HttpHandlerService,
+        UtilsService
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
