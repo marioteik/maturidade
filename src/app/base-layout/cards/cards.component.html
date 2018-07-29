@@ -1,0 +1,44 @@
+<div class="row">
+  <div *ngFor="let include of includes; index as idx" class="col-md-6 col-xl-4">
+  
+    <div class="card" *ngIf="(idx%3)==0">
+      <div class="card-status bg-{{include.color}}"></div>
+      <div class="card-header">
+        <h3 class="card-title">Card {{include.color}}</h3>
+        <div class="card-options">
+          <a href="#" class="card-options-collapse" data-toggle="card-collapse">
+            <i class="fe fe-chevron-up"></i>
+          </a>
+          <a href="#" class="card-options-remove" data-toggle="card-remove">
+            <i class="fe fe-x"></i>
+          </a>
+        </div>
+      </div>
+      <div class="card-body">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam deleniti fugit incidunt, iste, itaque minima neque pariatur
+        perferendis sed suscipit velit vitae voluptatem. A consequuntur, deserunt eaque error nulla temporibus!
+      </div>
+    </div>
+    <div class="card" *ngIf="(idx%3)!=0">
+      <div class="card-status bg-{{include.color}}"></div>
+      <div class="card-header">
+        <h3 class="card-title">Card with alert</h3>
+        <div class="card-options">
+          <a href="#" class="card-options-collapse" data-toggle="card-collapse">
+            <i class="fe fe-chevron-up"></i>
+          </a>
+          <a href="#" class="card-options-remove" data-toggle="card-remove">
+            <i class="fe fe-x"></i>
+          </a>
+        </div>
+      </div>
+      <div class="card-alert alert alert-{{include.status}} mb-0">
+        Adding action was {{include.status}}
+      </div>
+      <div class="card-body">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam deleniti fugit incidunt, iste, itaque minima neque pariatur
+        perferendis sed suscipit velit vitae voluptatem. A consequuntur, deserunt eaque error nulla temporibus!
+      </div>
+    </div>
+  </div>
+</div>
