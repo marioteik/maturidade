@@ -1,0 +1,41 @@
+<div class="card">
+  <div class="card-body">
+    <h3 class="card-title">Responsive Table</h3>
+
+    <table class="table table-responsive table-striped table-vcenter">
+      <thead>
+        <tr>
+          <th class="text-center" style="width: 1%">&nbsp;</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Budget</th>
+          <th class="text-center" style="width: 1%">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let include of includes;index as idx">
+          <td class="text-center">
+            <span class="avatar avatar-md d-block" [style.background-image]="include.image">
+              <span class="avatar-status bg-{{(idx%3)==0 ? 'yellow':'green'}}"></span>
+            </span>
+          </td>
+          <td class="font-weight-bold">{{ include.name }} {{ include.lastName }}</td>
+          <td>{{ include.email }}</td>
+          <td>
+            {{ include.budget }}
+          </td>
+          <td class="text-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-sm btn-primary js-tooltip-enabled" data-toggle="tooltip" title="" data-original-title="Edit">
+                <i class="fa fa-edit"></i>
+              </button>
+              <button type="button" class="btn btn-sm btn-primary js-tooltip-enabled" data-toggle="tooltip" title="" data-original-title="Delete">
+                <i class="fa fa-times"></i>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
