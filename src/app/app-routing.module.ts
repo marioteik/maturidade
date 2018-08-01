@@ -5,11 +5,12 @@ import { EntitiesListComponent } from './entities/list/list.component';
 import { AddEntitiesComponent } from './entities/add/add.component';
 import { MainReportComponent } from './reports/main/main-report.component';
 import { PageNotFoundComponent } from './base-layout/page-not-found/page-not-found.component';
-import { LoginComponent } from './components/login/login.component';
+//import { LoginComponent } from './components/login/login.component';
 import { CardsComponent } from './base-layout/cards/cards.component';
 import { FormsComponent } from './base-layout/form/form.component';
 import { TableComponent } from './base-layout/table/table.component';
 import { GraphicsComponent } from './base-layout/graphics/graphics.component';
+import { LoginComponent } from './logincomponent/login.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full' },

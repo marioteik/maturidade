@@ -1,0 +1,48 @@
+<div class="ava-form-login container-fluid mx-auto p-6 col-xl-6 col-lg-6 col-md-8 col-sm-12">
+  <form id="ava-form-login"
+    [formGroup]="form"
+    (ngSubmit)="onSubmitFormHandler($event)">
+    <div class="mx-auto col-md-9">
+        <header>
+            <h1 class="row login-title">Login</h1>
+            <h2 class="row login-subtitle">Entre com seus dados</h2>
+        </header>
+        <div>
+          <label class="row">
+            <input autocomplete="off"
+              class="form-control"
+              placeholder="Usuário"
+              formControlName="userName"
+              type="text">
+          </label>
+          <div class="row alert alert-warning"
+            *ngIf="onFieldHandler(form.controls['userName'])">
+            <span>{{ userInvalidMsg }}</span>
+          </div>
+        </div>
+
+        <div>
+          <label class="row">
+            <input autocomplete="off"
+              placeholder="Senha"
+              class="form-control"
+              formControlName="userPass"
+              type="password">
+          </label>
+          <div class="row alert alert-warning"
+            *ngIf="onFieldHandler(form.controls['userPass'])">
+            <span>{{ passInvalidMsg }}</span>
+          </div>
+        </div>
+
+        <div>
+            <div class="row justify-content-end">
+              <input type="submit"
+                value="Login"
+                class="col-4 btn btn-primary"
+                [disabled]="form.invalid" />
+            </div>
+        </div>
+    </div>
+  </form>
+</div>

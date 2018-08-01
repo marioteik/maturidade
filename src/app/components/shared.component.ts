@@ -6,12 +6,13 @@ import { PageNotFoundComponent } from "../base-layout/page-not-found/page-not-fo
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { MainReportComponent } from "../reports/main/main-report.component";
 import { FooterComponent } from "../base-layout/footer/footer.component";
-import { LoginComponent } from "./login/login.component";
+// import { LoginComponent } from "./login/login.component";
 import { RegisterComponent } from "./register/register.component";
 import { FormsComponent } from "../base-layout/form/form.component";
 import { CardsComponent } from "../base-layout/cards/cards.component";
 import { TableComponent } from "../base-layout/table/table.component";
 import { GraphicsComponent } from "../base-layout/graphics/graphics.component";
+import { LoginComponent } from "../logincomponent/login.component";
 
 export const ALL_COMPONENTS = [
     HeaderComponent,

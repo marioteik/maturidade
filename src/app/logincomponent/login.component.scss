@@ -1,0 +1,22 @@
+:root,
+html, body{background: #ccc !important}
+.ava-form-login {
+    background: #fff;
+}
+
+.form-control.ng-touched.ng-pristine.ng-invalid,
+.form-control.ng-dirty.ng-invalid {
+  border: 1px solid #f00
+}
+.form-control.ng-touched.ng-valid {
+  border: 1px solid #0f0;
+}
+
+.login-title {
+  font-size: 1.125rem;
+  line-height: 1.2;
+  font-weight: 400;
+}
+.login-subtitle {
+
+}
